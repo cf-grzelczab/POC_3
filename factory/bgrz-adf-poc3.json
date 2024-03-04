@@ -1,0 +1,9 @@
+{
+	"name": "bgrz-adf-poc3",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "818cf9ec-952f-4991-baf6-ad3af2b15191",
+		"tenantId": "7b4a3de9-7eb5-4f76-8b94-610e737564b9"
+	}
+}
