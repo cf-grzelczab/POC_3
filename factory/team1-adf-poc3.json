@@ -1,0 +1,9 @@
+{
+	"name": "team1-adf-poc3",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "34c8fdea-dbe9-47c0-a212-9e0dc1737ebf",
+		"tenantId": "7b4a3de9-7eb5-4f76-8b94-610e737564b9"
+	}
+}
