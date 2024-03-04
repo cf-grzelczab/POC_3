@@ -1,0 +1,136 @@
+{
+	"name": "GIOS_to_ADLS_json_all",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "team1adfpoc3ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "all_gios.json",
+				"folderPath": "raw",
+				"fileSystem": "poc3"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"stCalcDate": {
+					"type": "string"
+				},
+				"stIndexLevel": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "integer"
+						},
+						"indexLevelName": {
+							"type": "string"
+						}
+					}
+				},
+				"stSourceDataDate": {
+					"type": "string"
+				},
+				"so2CalcDate": {
+					"type": "string"
+				},
+				"so2IndexLevel": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "integer"
+						},
+						"indexLevelName": {
+							"type": "string"
+						}
+					}
+				},
+				"so2SourceDataDate": {
+					"type": "string"
+				},
+				"no2CalcDate": {
+					"type": "string"
+				},
+				"no2IndexLevel": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "integer"
+						},
+						"indexLevelName": {
+							"type": "string"
+						}
+					}
+				},
+				"no2SourceDataDate": {
+					"type": "string"
+				},
+				"pm10CalcDate": {
+					"type": "string"
+				},
+				"pm10IndexLevel": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "integer"
+						},
+						"indexLevelName": {
+							"type": "string"
+						}
+					}
+				},
+				"pm10SourceDataDate": {
+					"type": "string"
+				},
+				"pm25CalcDate": {
+					"type": "string"
+				},
+				"pm25IndexLevel": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "integer"
+						},
+						"indexLevelName": {
+							"type": "string"
+						}
+					}
+				},
+				"pm25SourceDataDate": {
+					"type": "string"
+				},
+				"o3CalcDate": {
+					"type": "string"
+				},
+				"o3IndexLevel": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "integer"
+						},
+						"indexLevelName": {
+							"type": "string"
+						}
+					}
+				},
+				"o3SourceDataDate": {
+					"type": "string"
+				},
+				"stIndexStatus": {
+					"type": "boolean"
+				},
+				"stIndexCrParam": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

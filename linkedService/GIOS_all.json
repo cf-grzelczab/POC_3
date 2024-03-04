@@ -1,0 +1,13 @@
+{
+	"name": "GIOS_all",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://api.gios.gov.pl/pjp-api/rest/station/findAll",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

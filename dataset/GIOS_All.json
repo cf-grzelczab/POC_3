@@ -1,0 +1,13 @@
+{
+	"name": "GIOS_All",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "GIOS_all",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
