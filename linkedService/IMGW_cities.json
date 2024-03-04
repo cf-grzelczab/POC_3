@@ -1,0 +1,12 @@
+{
+	"name": "IMGW_cities",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
