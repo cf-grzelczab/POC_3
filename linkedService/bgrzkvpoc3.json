@@ -1,0 +1,10 @@
+{
+	"name": "bgrzkvpoc3",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://bgrzkvpoc3.vault.azure.net/"
+		}
+	}
+}
