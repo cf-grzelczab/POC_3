@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "LoopThroughIDs",
+				"name": "GIOS_pollution_loop",
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": [],
@@ -84,7 +84,6 @@
 									"referenceName": "GIOS_to_ADLS_json_pollutions",
 									"type": "DatasetReference",
 									"parameters": {
-										"extention": ".json",
 										"folder": "@formatDateTime(utcnow(), 'yyyy-MM-dd')"
 									}
 								}

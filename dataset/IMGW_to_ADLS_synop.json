@@ -1,0 +1,29 @@
+{
+	"name": "IMGW_to_ADLS_synop",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "team1adfpoc3ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"folder": {
+				"type": "string"
+			},
+			"extention": {
+				"type": "string",
+				"defaultValue": ".json"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "@concat(dataset().folder,dataset().extention)",
+				"folderPath": "@concat('raw/synop/',dataset().folder)",
+				"fileSystem": "poc3"
+			}
+		},
+		"schema": {}
+	}
+}

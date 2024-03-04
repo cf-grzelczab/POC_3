@@ -1,0 +1,12 @@
+{
+	"name": "imgw_hydro",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "imgw_hydro",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}

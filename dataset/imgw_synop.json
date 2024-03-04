@@ -1,0 +1,12 @@
+{
+	"name": "imgw_synop",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "IMGW_synop",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}

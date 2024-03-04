@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "LoopThroughIDs",
+				"name": "GIOS_stations_loop",
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": [],
