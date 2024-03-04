@@ -1,0 +1,73 @@
+{
+	"name": "superbatch_production_dl",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "try_as_rest_copy1",
+						"type": "DatasetReference"
+					},
+					"name": "pullStations",
+					"description": "import stations data"
+				},
+				{
+					"dataset": {
+						"referenceName": "GIOS_to_ADLS_polutions",
+						"type": "DatasetReference"
+					},
+					"name": "pullPollutions",
+					"description": "import pollutions data"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "GIOS_to_ADLS_json_upd_copy1",
+						"type": "DatasetReference"
+					},
+					"name": "writeRawStationsToAdls"
+				},
+				{
+					"dataset": {
+						"referenceName": "GIOS_to_ADLS_json_pollutions_copy1",
+						"type": "DatasetReference"
+					},
+					"name": "writeRawPollutionsToAdls"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     httpMethod: 'GET',",
+				"     timeout: 30,",
+				"     requestInterval: 0,",
+				"     paginationRules: ['supportRFC5988' -> 'true'],",
+				"     responseFormat: ['type' -> 'json', 'documentForm' -> 'documentPerLine']) ~> pullStations",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     httpMethod: 'GET',",
+				"     timeout: 30,",
+				"     requestInterval: 0,",
+				"     paginationRules: ['supportRFC5988' -> 'true'],",
+				"     responseFormat: ['type' -> 'json', 'documentForm' -> 'documentPerLine']) ~> pullPollutions",
+				"pullStations sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> writeRawStationsToAdls",
+				"pullPollutions sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> writeRawPollutionsToAdls"
+			]
+		}
+	}
+}

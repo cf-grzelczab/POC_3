@@ -1,0 +1,20 @@
+{
+	"name": "GIOS_to_ADLS_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "team1adfpoc3ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "raw/stations",
+				"fileSystem": "poc3"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
