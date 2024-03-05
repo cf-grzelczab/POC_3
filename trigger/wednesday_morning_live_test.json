@@ -9,6 +9,12 @@
 					"referenceName": "PROD_get_IMGW_hydro",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "PROD_get_IMGW_synop",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
