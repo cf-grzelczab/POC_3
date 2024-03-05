@@ -1,0 +1,11 @@
+dbt_project:
+  outputs:
+    dev:
+      catalog: null
+      host: adb-4361469991600834.14.azuredatabricks.net
+      http_path: sql/protocolv1/o/4361469991600834/0227-144835-pxjvsclf
+      schema: team1_poc3_dbt
+      threads: 1
+      token: # retrieve from Databricks and insert here before proceeding
+      type: databricks
+  target: dev
