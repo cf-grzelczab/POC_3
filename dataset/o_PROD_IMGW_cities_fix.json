@@ -1,0 +1,12 @@
+{
+	"name": "o_PROD_IMGW_cities_fix",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "IMGW_cities_fix",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}

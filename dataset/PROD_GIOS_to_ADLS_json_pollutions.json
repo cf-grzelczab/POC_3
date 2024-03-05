@@ -1,0 +1,36 @@
+{
+	"name": "PROD_GIOS_to_ADLS_json_pollutions",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "team1adfpoc3ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"extention": {
+				"type": "String",
+				"defaultValue": ".json"
+			},
+			"folder": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(item(),dataset().extention)",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat('raw/pollutions/',dataset().folder)",
+					"type": "Expression"
+				},
+				"fileSystem": "poc3"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
