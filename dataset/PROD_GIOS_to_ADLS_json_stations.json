@@ -1,8 +1,8 @@
 {
-	"name": "GIOS_to_ADLS_json_upd",
+	"name": "PROD_GIOS_to_ADLS_json_stations",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "team1adfpoc3ls",
+			"referenceName": "team1adfpoc3ls_v2",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {

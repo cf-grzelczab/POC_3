@@ -1,5 +1,5 @@
 {
-	"name": "try_as_rest",
+	"name": "PROD_GIOS_stations",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "GIOS_rest",

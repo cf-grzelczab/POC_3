@@ -72,7 +72,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "try_as_rest",
+									"referenceName": "PROD_GIOS_stations",
 									"type": "DatasetReference",
 									"parameters": {
 										"relativeURL": "@item()"
@@ -81,7 +81,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "GIOS_to_ADLS_json_upd",
+									"referenceName": "PROD_GIOS_to_ADLS_json_stations",
 									"type": "DatasetReference",
 									"parameters": {
 										"extention": ".json"
