@@ -2,7 +2,7 @@
 	"name": "IMGW_to_ADLS_cities_v2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "team1adfpoc3ls",
+			"referenceName": "team1adfpoc3ls_v2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
