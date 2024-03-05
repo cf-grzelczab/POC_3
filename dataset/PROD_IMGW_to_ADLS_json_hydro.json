@@ -1,8 +1,8 @@
 {
-	"name": "IMGW_to_ADLS_hydro",
+	"name": "PROD_IMGW_to_ADLS_json_hydro",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "team1adfpoc3ls",
+			"referenceName": "team1adfpoc3ls_v2",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
