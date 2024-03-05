@@ -39,13 +39,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "PROD_IGMW_cities",
+						"referenceName": "o_PROD_IMGW_cities_fix",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "IMGW_to_ADLS_cities_v2",
+						"referenceName": "imgw_cities_fix",
 						"type": "DatasetReference"
 					}
 				]

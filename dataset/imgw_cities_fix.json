@@ -1,0 +1,56 @@
+{
+	"name": "imgw_cities_fix",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "team1adfpoc3ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "raw/gov",
+				"fileSystem": "poc3"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Nazwa miejscowości",
+				"type": "String"
+			},
+			{
+				"name": "Rodzaj",
+				"type": "String"
+			},
+			{
+				"name": "Gmina",
+				"type": "String"
+			},
+			{
+				"name": "Powiat",
+				"type": "String"
+			},
+			{
+				"name": "Województwo",
+				"type": "String"
+			},
+			{
+				"name": "Identyfikator miejscowości z krajowego rejestru urzędowego podziału terytorialnego kraju TERYT",
+				"type": "String"
+			},
+			{
+				"name": "Dopełniacz",
+				"type": "String"
+			},
+			{
+				"name": "Przymiotnik",
+				"type": "String"
+			}
+		]
+	}
+}
