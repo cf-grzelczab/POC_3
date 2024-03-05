@@ -2,7 +2,7 @@
 	"name": "wednesday_morning_live_test",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
