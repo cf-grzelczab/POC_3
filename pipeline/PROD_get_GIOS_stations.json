@@ -1,5 +1,5 @@
 {
-	"name": "get_GIOS_stations",
+	"name": "PROD_get_GIOS_stations",
 	"properties": {
 		"activities": [
 			{
