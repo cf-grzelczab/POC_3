@@ -1,0 +1,25 @@
+{
+	"name": "wednesday_morning_live_test",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PROD_get_GIOS_all",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 24,
+				"startTime": "2024-03-06T07:00:00",
+				"endTime": "2024-03-07T14:48:00",
+				"timeZone": "Central European Standard Time"
+			}
+		}
+	}
+}
