@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://team1poc3dls.dfs.core.windows.net/poc3/raw/stations?upn=false&action=getStatus&timeout=90&sp=racwdlme&st=2024-02-29T08:48:22Z&se=2024-03-11T22:48:22Z&spr=https&sv=2022-11-02&sr=c&sig=XXXXX",
+			"url": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
