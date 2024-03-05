@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "team1-adf-poc3"
+		},
+		"team1adfpoc3ls_accountKey": {
+			"value": ""
+		},
+		"GIOS_properties_typeProperties_url": {
+			"value": "https://api.gios.gov.pl/pjp-api/rest/station/sensors/"
+		},
+		"GIOS_rest_properties_typeProperties_url": {
+			"value": "https://api.gios.gov.pl/pjp-api/rest/station/sensors/"
+		},
+		"GIOS_rest_pollutions_properties_typeProperties_url": {
+			"value": "https://api.gios.gov.pl/pjp-api/rest/aqindex/getIndex/"
+		},
+		"team1adfpoc3ls_properties_typeProperties_url": {
+			"value": "https://team1poc3dls.dfs.core.windows.net/"
+		}
+	}
+}
