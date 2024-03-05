@@ -1,5 +1,5 @@
 {
-	"name": "IGMW_cities_v3",
+	"name": "o_PROD_IGMW_cities_v3",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "IMGW_cities_2",
