@@ -245,7 +245,7 @@
 			"recurrence": {
 				"frequency": "Hour",
 				"interval": 24,
-				"startTime": "2024-03-06T07:00:00",
+				"startTime": "2024-03-06T06:00:00",
 				"endTime": "2024-03-07T14:48:00",
 				"timeZone": "Central European Standard Time"
 			}
