@@ -25,29 +25,28 @@
 						}
 					},
 					"sink": {
-						"type": "JsonSink",
+						"type": "DelimitedTextSink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
-							"type": "JsonWriteSettings"
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
 						}
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "IMGW_cities_2",
+						"referenceName": "IGMW_cities_v3",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "IMGW_to_ADLS_hydro",
-						"type": "DatasetReference",
-						"parameters": {
-							"folder": "@formatDateTime(utcnow(), 'yyyy-MM-dd')"
-						}
+						"referenceName": "IMGW_to_ADLS_cities_v2",
+						"type": "DatasetReference"
 					}
 				]
 			}

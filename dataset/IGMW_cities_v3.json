@@ -1,0 +1,12 @@
+{
+	"name": "IGMW_cities_v3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "IMGW_cities_2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
