@@ -39,7 +39,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "o_PROD_IGMW_cities_v3",
+						"referenceName": "PROD_IGMW_cities",
 						"type": "DatasetReference"
 					}
 				],
