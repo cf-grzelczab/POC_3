@@ -1,5 +1,5 @@
 {
-	"name": "GIOS_All",
+	"name": "PROD_GIOS_all",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "GIOS_all",
