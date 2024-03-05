@@ -14,7 +14,7 @@
 				},
 				{
 					"dataset": {
-						"referenceName": "PROD_GIOS_to_ADLS_polutions",
+						"referenceName": "PROD_GIOS_polutions",
 						"type": "DatasetReference"
 					},
 					"name": "pullPollutions",
