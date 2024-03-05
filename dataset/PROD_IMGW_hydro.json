@@ -1,5 +1,5 @@
 {
-	"name": "imgw_hydro",
+	"name": "PROD_IMGW_hydro",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "imgw_hydro",

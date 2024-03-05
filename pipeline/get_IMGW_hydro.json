@@ -37,13 +37,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "imgw_hydro",
+						"referenceName": "PROD_IMGW_hydro",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "IMGW_to_ADLS_hydro",
+						"referenceName": "PROD_IMGW_to_ADLS_json_hydro",
 						"type": "DatasetReference",
 						"parameters": {
 							"folder": "@formatDateTime(utcnow(), 'yyyy-MM-dd')",
