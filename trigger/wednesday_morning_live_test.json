@@ -15,6 +15,15 @@
 					"referenceName": "PROD_get_IMGW_synop",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "PROD_get_GIOS_pollution",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"relativeURL": "@item()"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
