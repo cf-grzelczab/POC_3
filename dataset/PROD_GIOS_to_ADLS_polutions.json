@@ -1,5 +1,5 @@
 {
-	"name": "GIOS_to_ADLS_polutions",
+	"name": "PROD_GIOS_to_ADLS_polutions",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "GIOS_rest_pollutions",

@@ -1,5 +1,5 @@
 {
-	"name": "get_GIOS_pollution",
+	"name": "PROD_get_GIOS_pollution",
 	"properties": {
 		"activities": [
 			{
@@ -72,7 +72,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "GIOS_to_ADLS_polutions",
+									"referenceName": "PROD_GIOS_to_ADLS_polutions",
 									"type": "DatasetReference",
 									"parameters": {
 										"relativeURL": "@item()"
@@ -81,9 +81,10 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "GIOS_to_ADLS_json_pollutions",
+									"referenceName": "PROD_GIOS_to_ADLS_json_pollutions",
 									"type": "DatasetReference",
 									"parameters": {
+										"extention": ".json",
 										"folder": "@formatDateTime(utcnow(), 'yyyy-MM-dd')"
 									}
 								}
