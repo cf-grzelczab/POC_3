@@ -1,5 +1,5 @@
 {
-	"name": "imgw_synop",
+	"name": "PROD_IMGW_synop",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "IMGW_synop",

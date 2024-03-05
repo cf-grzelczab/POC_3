@@ -37,13 +37,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "imgw_synop",
+						"referenceName": "PROD_IMGW_synop",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "IMGW_to_ADLS_synop",
+						"referenceName": "PROD_IMGW_to_ADLS_json_synop",
 						"type": "DatasetReference",
 						"parameters": {
 							"folder": "@formatDateTime(utcnow(), 'yyyy-MM-dd')",
