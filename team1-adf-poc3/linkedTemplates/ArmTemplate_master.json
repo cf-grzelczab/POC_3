@@ -1,0 +1,422 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "team1-adf-poc3"
+		},
+		"team1adfpoc3ls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'team1adfpoc3ls'"
+		},
+		"team1adfpoc3ls_v2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'team1adfpoc3ls_v2'"
+		},
+		"GIOS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.gios.gov.pl/pjp-api/rest/station/sensors/"
+		},
+		"GIOS_all_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.gios.gov.pl/pjp-api/rest/station/findAll"
+		},
+		"GIOS_rest_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.gios.gov.pl/pjp-api/rest/station/sensors/"
+		},
+		"GIOS_rest_pollutions_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.gios.gov.pl/pjp-api/rest/aqindex/getIndex/"
+		},
+		"GOV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv"
+		},
+		"IMGW_cities_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv"
+		},
+		"IMGW_cities_2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv"
+		},
+		"IMGW_cities_fix_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv"
+		},
+		"IMGW_synop_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://danepubliczne.imgw.pl/api/data/synop/format/json"
+		},
+		"govcities2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv"
+		},
+		"imgw_hydro_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://danepubliczne.imgw.pl/api/data/hydro/format/json"
+		},
+		"team1adfpoc3ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://team1poc3dls.dfs.core.windows.net/"
+		},
+		"team1adfpoc3ls_v2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://team1poc3dls.dfs.core.windows.net/"
+		},
+		"wednesday_morning_live_test_properties_PROD_get_GIOS_pollution_parameters_relativeURL": {
+			"type": "array",
+			"defaultValue": [
+				"114",
+				"117",
+				"129",
+				"52",
+				"109",
+				"11",
+				"16",
+				"38",
+				"70",
+				"74",
+				"9153",
+				"11254",
+				"11934",
+				"12055",
+				"12056",
+				"17780",
+				"156",
+				"158",
+				"16237",
+				"16613",
+				"295",
+				"296",
+				"314",
+				"355",
+				"10058",
+				"291",
+				"319",
+				"322",
+				"331",
+				"562",
+				"9913",
+				"11358",
+				"16271",
+				"17160",
+				"590",
+				"10374",
+				"568",
+				"584",
+				"600",
+				"8976",
+				"10018",
+				"16181",
+				"16413",
+				"671",
+				"10125",
+				"17159",
+				"17179",
+				"631",
+				"638",
+				"646",
+				"659",
+				"665",
+				"678",
+				"684",
+				"870",
+				"882",
+				"10005",
+				"10030",
+				"17741",
+				"944",
+				"16493",
+				"952",
+				"902",
+				"920",
+				"946",
+				"950",
+				"9218",
+				"10834",
+				"16495",
+				"17438",
+				"986",
+				"987",
+				"989",
+				"16270",
+				"805",
+				"809",
+				"813",
+				"814",
+				"837",
+				"841",
+				"17880",
+				"834",
+				"10554",
+				"11855",
+				"789",
+				"10158",
+				"798",
+				"800",
+				"842",
+				"845",
+				"853",
+				"856",
+				"9000",
+				"11278",
+				"11455",
+				"11457",
+				"11794",
+				"16406",
+				"11195",
+				"16196",
+				"16497",
+				"769",
+				"778",
+				"785",
+				"10794",
+				"11754",
+				"12138",
+				"17758",
+				"877",
+				"861",
+				"11554",
+				"11616",
+				"400",
+				"401",
+				"402",
+				"10123",
+				"10139",
+				"10447",
+				"11303",
+				"444",
+				"10120",
+				"426",
+				"9173",
+				"9175",
+				"10414",
+				"10438",
+				"12057",
+				"609",
+				"11174",
+				"11814",
+				"17658",
+				"612",
+				"618",
+				"9994",
+				"11154",
+				"11916",
+				"731",
+				"732",
+				"736",
+				"16242",
+				"725",
+				"740",
+				"741",
+				"742",
+				"743",
+				"750",
+				"437",
+				"443",
+				"449",
+				"455",
+				"459",
+				"9179",
+				"10119",
+				"10124",
+				"10446",
+				"10814",
+				"11301",
+				"11434",
+				"16753",
+				"16894",
+				"17118",
+				"17138",
+				"530",
+				"538",
+				"550",
+				"552",
+				"10955",
+				"10956",
+				"16533",
+				"497",
+				"501",
+				"515",
+				"460",
+				"466",
+				"471",
+				"485",
+				"488",
+				"517",
+				"9798",
+				"12038",
+				"266",
+				"236",
+				"248",
+				"275",
+				"282",
+				"285",
+				"10874",
+				"11360",
+				"12100",
+				"361",
+				"387",
+				"11294",
+				"374",
+				"376",
+				"379",
+				"382",
+				"11576",
+				"145",
+				"206",
+				"208",
+				"225",
+				"9791",
+				"142",
+				"143",
+				"164",
+				"190",
+				"232",
+				"966",
+				"11336",
+				"961",
+				"983",
+				"10934",
+				"17158"
+			]
+		},
+		"team3_managed_priv_endp_v2_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/9bf5731e-1469-47d3-8c28-e5fc3ded3c90/resourceGroups/cf-int-az-sbx-upskilling/providers/Microsoft.Storage/storageAccounts/team1poc3dls"
+		},
+		"team3_managed_priv_endp_v2_properties_groupId": {
+			"type": "string",
+			"defaultValue": "dfs"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "team1-adf-poc3_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"team1adfpoc3ls_accountKey": {
+						"value": "[parameters('team1adfpoc3ls_accountKey')]"
+					},
+					"team1adfpoc3ls_v2_accountKey": {
+						"value": "[parameters('team1adfpoc3ls_v2_accountKey')]"
+					},
+					"GIOS_properties_typeProperties_url": {
+						"value": "[parameters('GIOS_properties_typeProperties_url')]"
+					},
+					"GIOS_all_properties_typeProperties_url": {
+						"value": "[parameters('GIOS_all_properties_typeProperties_url')]"
+					},
+					"GIOS_rest_properties_typeProperties_url": {
+						"value": "[parameters('GIOS_rest_properties_typeProperties_url')]"
+					},
+					"GIOS_rest_pollutions_properties_typeProperties_url": {
+						"value": "[parameters('GIOS_rest_pollutions_properties_typeProperties_url')]"
+					},
+					"GOV_properties_typeProperties_url": {
+						"value": "[parameters('GOV_properties_typeProperties_url')]"
+					},
+					"IMGW_cities_properties_typeProperties_url": {
+						"value": "[parameters('IMGW_cities_properties_typeProperties_url')]"
+					},
+					"IMGW_cities_2_properties_typeProperties_url": {
+						"value": "[parameters('IMGW_cities_2_properties_typeProperties_url')]"
+					},
+					"IMGW_cities_fix_properties_typeProperties_url": {
+						"value": "[parameters('IMGW_cities_fix_properties_typeProperties_url')]"
+					},
+					"IMGW_synop_properties_typeProperties_url": {
+						"value": "[parameters('IMGW_synop_properties_typeProperties_url')]"
+					},
+					"govcities2_properties_typeProperties_url": {
+						"value": "[parameters('govcities2_properties_typeProperties_url')]"
+					},
+					"imgw_hydro_properties_typeProperties_url": {
+						"value": "[parameters('imgw_hydro_properties_typeProperties_url')]"
+					},
+					"team1adfpoc3ls_properties_typeProperties_url": {
+						"value": "[parameters('team1adfpoc3ls_properties_typeProperties_url')]"
+					},
+					"team1adfpoc3ls_v2_properties_typeProperties_url": {
+						"value": "[parameters('team1adfpoc3ls_v2_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "team1-adf-poc3_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"team3_managed_priv_endp_v2_properties_privateLinkResourceId": {
+						"value": "[parameters('team3_managed_priv_endp_v2_properties_privateLinkResourceId')]"
+					},
+					"team3_managed_priv_endp_v2_properties_groupId": {
+						"value": "[parameters('team3_managed_priv_endp_v2_properties_groupId')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'team1-adf-poc3_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "team1-adf-poc3_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"wednesday_morning_live_test_properties_PROD_get_GIOS_pollution_parameters_relativeURL": {
+						"value": "[parameters('wednesday_morning_live_test_properties_PROD_get_GIOS_pollution_parameters_relativeURL')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'team1-adf-poc3_ArmTemplate_1')]"
+			]
+		}
+	]
+}
