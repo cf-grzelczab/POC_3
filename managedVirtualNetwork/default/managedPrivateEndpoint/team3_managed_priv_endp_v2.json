@@ -1,0 +1,7 @@
+{
+	"name": "team3_managed_priv_endp_v2",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/9bf5731e-1469-47d3-8c28-e5fc3ded3c90/resourceGroups/cf-int-az-sbx-upskilling/providers/Microsoft.Storage/storageAccounts/team1poc3dls",
+		"groupId": "dfs"
+	}
+}
