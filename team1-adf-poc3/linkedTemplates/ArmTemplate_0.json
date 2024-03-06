@@ -55,6 +55,10 @@
 			"type": "string",
 			"defaultValue": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv"
 		},
+		"govcities2_1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv"
+		},
 		"imgw_hydro_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://danepubliczne.imgw.pl/api/data/hydro/format/json"
@@ -223,6 +227,21 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/govcities2_1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "HttpServer",
+				"typeProperties": {
+					"url": "[parameters('govcities2_1_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/imgw_hydro')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -278,6 +297,61 @@
 			"apiVersion": "2018-06-01",
 			"properties": {},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "govcities2_1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "HttpServerLocation"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/govcities2_1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText2')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "team1adfpoc3ls",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "cities.csv",
+						"folderPath": "raw/gov",
+						"fileSystem": "poc3"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/team1adfpoc3ls')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/GIOS')]",
@@ -347,108 +421,6 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"folderPath": "raw/stations",
-						"fileSystem": "poc3"
-					}
-				},
-				"schema": {}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/team1adfpoc3ls')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/GIOS_to_ADLS_json_pollutions')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "team1adfpoc3ls",
-					"type": "LinkedServiceReference"
-				},
-				"parameters": {
-					"extention": {
-						"type": "String",
-						"defaultValue": ".json"
-					}
-				},
-				"annotations": [],
-				"type": "Json",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobFSLocation",
-						"fileName": {
-							"value": "@concat(item(),dataset().extention)",
-							"type": "Expression"
-						},
-						"folderPath": "raw/pollutions",
-						"fileSystem": "poc3"
-					}
-				},
-				"schema": {}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/team1adfpoc3ls')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/GIOS_to_ADLS_json_pollutions_copy1')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "team1adfpoc3ls",
-					"type": "LinkedServiceReference"
-				},
-				"parameters": {
-					"extention": {
-						"type": "String",
-						"defaultValue": ".json"
-					}
-				},
-				"annotations": [],
-				"type": "Json",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobFSLocation",
-						"fileName": {
-							"value": "@concat(item(),dataset().extention)",
-							"type": "Expression"
-						},
-						"folderPath": "test_raw/pollutions",
-						"fileSystem": "poc3"
-					}
-				},
-				"schema": {}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/team1adfpoc3ls')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/GIOS_to_ADLS_json_upd')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "team1adfpoc3ls",
-					"type": "LinkedServiceReference"
-				},
-				"parameters": {
-					"extention": {
-						"type": "String",
-						"defaultValue": ".json"
-					}
-				},
-				"annotations": [],
-				"type": "Json",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobFSLocation",
-						"fileName": {
-							"value": "@concat(item(),dataset().extention)",
-							"type": "Expression"
-						},
 						"folderPath": "raw/stations",
 						"fileSystem": "poc3"
 					}

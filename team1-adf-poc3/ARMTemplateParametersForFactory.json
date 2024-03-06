@@ -41,6 +41,9 @@
 		"govcities2_properties_typeProperties_url": {
 			"value": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv"
 		},
+		"govcities2_1_properties_typeProperties_url": {
+			"value": "https://api.dane.gov.pl/resources/39233,wykaz-urzedowych-nazw-miejscowosci-i-ich-czesci/csv"
+		},
 		"imgw_hydro_properties_typeProperties_url": {
 			"value": "https://danepubliczne.imgw.pl/api/data/hydro/format/json"
 		},
